@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    max-width: 1600px;
+    margin: 0px auto;
+    background-color: #f7f7f7;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.section--lg{
+    padding: 100px 0px 80px 0px;
+}
+
+.section-title{
+    font-family: 'Raleway';
+    font-weight: 700;
+    margin: 0;
+    font-size: 42px;
+}
+
+.section-content{
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.common-btn{
+    background-color: #ed6d1e;
+    border-radius: 50px;
+    padding: 15px 25px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    width: max-content;
+    margin: 0px auto;
+    align-items: center;
+    transition: .2s all ease;
+}
+
+.common-btn span{
+    margin-left: 20px;
+    color: #fff;
+}
+
+.common-btn:hover{
+    background-color: #c68029;
+    color: #fff;
+}
+
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* header css start */
+
+.header{
+    background-image: url('images/home-banner.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    color: #fff;
+}
+
+.header-overlay{
+    background-color: #3e3a3b;
+    opacity: 0.44;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.header-inner{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    z-index: 1111;
+}
+
+.header-inner .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.left-header a, .left-footer a{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.right-header, .middle-footer{
+    display: flex;
+    gap: 20px;
+}
+
+.right-header a , .middle-footer a{
+    padding: 0px 25px;
+    font-weight: 500;
+}
+
+.home-banner-content{
+    padding: 150px 0px 150px 0px;
+    position: relative;
+    z-index: 1111;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.home-banner-content h1{
+    display: flex;
+    margin: 0px auto;
+    width: 50%;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.home-banner-content p{
+    display: flex;
+    margin: 0px auto;
+    width: 70%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    margin: 0px auto;
+}
+
+/* header css end */
+
+
+
+
+/* products section css start */
+
+.products-section{
+    position: relative;
+}
+
+.dots-img{
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    z-index: -5;
+}
+
+.products-inner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+.product-item{
+    background-size: cover;
+    position: relative;
+    height: 250px;
+    transition: all .2s;
+    background-position: 100%;
+}
+
+.product-item:first-child{
+    background-image: url('images/jumbo-rolls.jpeg');
+}
+
+.product-item:nth-child(2){
+    background-image: url('images/table-napkin.jpeg');
+}
+
+.product-item:nth-child(3){
+    background-image: url('images/corrugated-box.jpeg');
+}
+
+.product-overlay{
+    background-color: #606060c4;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.product-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    z-index: 2;
+    padding: 40px;
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    transition: all .3s;
+}
+
+.product-content-2{
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    transform: translateY(-40%) translateX(-50%);
+}
+
+.product-content-2 .common-btn{
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 0%;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all .3s ease;
+}
+
+.product-content-2 .common-btn:hover{
+    background: none !important;
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
+}
+
+.product-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 2px 12px 20px rgba(0, 0, 0, .1);
+}
+
+
+.product-item:hover .product-content{
+    opacity: 0;
+    transform: translateY(-60%) translateX(-50%);
+}
+
+.product-item:hover .product-content-2{
+    opacity: 1;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+
+.product-content img{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.product-content h3{
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.products-section .common-btn{
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* products section css end */
+
+
+
+/* about us section css start */
+
+.about-us-inner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.left-about-us img{
+    height: 450px;
+}
+
+.right-about-us{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 25px;
+}
+
+.right-about-us .common-btn{
+    margin: 0px;
+}
+
+.about-us-inner.reverse{
+    margin-top: 70px;
+}
+
+.about-us-inner.reverse .right-about-us{
+    padding-left: 30px;
+}
+
+/* about us section css end */
+
+
+/* features section css start */
+
+.features-inner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.feature-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-title{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #3e3a3b;
+}
+
+.feature-title h3{
+    font-size: 28px;
+    width: 45%;
+}
+
+.feature-title i{
+    font-size: 30px;
+}
+
+/* features section css end */
+
+/* discount container css start */
+
+.discount__container{
+    background-image: url('images/discount-banner.jpeg');
+    background-color: #3e3a3b;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.discount__container .container{
+    position: relative;
+    z-index: 1111;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.discount__container .container p{
+    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+/* discount container css end */
+
+/* clients containercss start */
+
+.clients__container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+}
+
+.clients__container img{
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .05);
+    transition: .2s all ease;
+}
+
+.clients__container img:hover{
+    transform: translateY(-10px);
+}
+
+/* clients containercss end */
+
+/* footer css start */
+
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0px;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.middle-footer a:hover{
+    color: #ed6d1e;
+}
+
+.right-footer p{
+    font-size: 12px;
+    text-align: end;
+}
+
+/* footer css end */
+
+
+/******* fade effects  *********/
+
+.reveal{
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+
+.active.fade-up {
+    animation: fade-up 1s ease-in;
+  }
+
+  .active.fade-up-form {
+    animation: fade-up-form 1s ease-in;
+  }
+
+  .active.fadeInAnimation{
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
